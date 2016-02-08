@@ -13,8 +13,9 @@ export default AppBarXO;
 export const Layout = ({content}) => (
     <div>
     <AppBarXO/>
-        <h1>My App</h1>
-        <hr />
+        <br />
         <div>{content}</div>
     </div>
 );
+
+

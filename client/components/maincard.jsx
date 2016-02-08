@@ -1,4 +1,5 @@
 import React from 'react';
+import {Board} from './board.jsx';
 import Card from 'material-ui/lib/card/card';
 import CardActions from 'material-ui/lib/card/card-actions';
 import CardHeader from 'material-ui/lib/card/card-header';
@@ -7,19 +8,17 @@ import CardTitle from 'material-ui/lib/card/card-title';
 import FlatButton from 'material-ui/lib/flat-button';
 import CardText from 'material-ui/lib/card/card-text';
 
-export const CardExampleWithAvatar = () => (
+
+export const MainCard = () => (
   <Card>
     <CardHeader
-      title="URL Avatar"
-      subtitle="Subtitle"
+      title="Martin"
+      subtitle="Playing Noughts"
       avatar="http://lorempixel.com/100/100/nature/"
     />
-    <CardMedia
-      overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-    >
-      <img src="http://lorempixel.com/600/337/nature/" />
+    <CardMedia>
+        <Board/>
     </CardMedia>
-    <CardTitle title="Card title" subtitle="Card subtitle" />
     <CardText>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
@@ -27,9 +26,7 @@ export const CardExampleWithAvatar = () => (
       Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
     </CardText>
     <CardActions>
-      <FlatButton label="Action1" />
-      <FlatButton label="Action2" />
+      <FlatButton label="Play it Again, Martin" />
     </CardActions>
   </Card>
 );
-

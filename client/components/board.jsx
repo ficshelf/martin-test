@@ -1,7 +1,4 @@
 import React from 'react';
-import GridList from 'material-ui/lib/grid-list/grid-list';
-import GridTile from 'material-ui/lib/grid-list/grid-tile';
-import StarBorder from 'material-ui/lib/svg-icons/toggle/star-border';
 import IconButton from 'material-ui/lib/icon-button';
 import RaisedButton from 'material-ui/lib/raised-button';
 import Paper from 'material-ui/lib/paper';
@@ -55,30 +52,31 @@ export const Board = () => (
   <RaisedButton label="Secondary" disabled={true} style={styles.button} >
 	<O style={styles.icon} />
  </RaisedButton>
+ <RaisedButton label="Secondary" disabled={true} style={styles.button} >
+	<O style={styles.icon} />
+ </RaisedButton>
+ <RaisedButton label="Secondary" primary={true}  style={styles.button} >
+	<X style={styles.icon} />
+ </RaisedButton>
+ </div>
+ <div className="row">
+  <RaisedButton label="Secondary" secondary={true} style={styles.button} >
+ </RaisedButton>
  <RaisedButton label="Secondary" secondary={true} style={styles.button} >
+ </RaisedButton>
+ <RaisedButton label="Secondary" primary={true} style={styles.button} >
+	<X style={styles.icon} />
+ </RaisedButton>
+ </div>
+ <div className="row">
+  <RaisedButton label="Secondary" disabled={true} style={styles.button} >
+	<O style={styles.icon} />
  </RaisedButton>
  <RaisedButton label="Secondary" disabled={true} style={styles.button} >
 	<X style={styles.icon} />
  </RaisedButton>
- </div>
- <div className="row">
-  <RaisedButton label="Secondary" secondary={true} style={styles.button} >
- </RaisedButton>
- <RaisedButton label="Secondary" secondary={true} style={styles.button} >
- </RaisedButton>
- <RaisedButton label="Secondary" secondary={true} style={styles.button} >
+ <RaisedButton label="Secondary" primary={true} style={styles.button} >
 	<X style={styles.icon} />
- </RaisedButton>
- </div>
- <div className="row">
-  <RaisedButton label="Secondary" secondary={true} style={styles.button} >
-	<ContentAdd style={styles.icon} />
- </RaisedButton>
- <RaisedButton label="Secondary" secondary={true} style={styles.button} >
-	<ContentAdd style={styles.icon} />
- </RaisedButton>
- <RaisedButton label="Secondary" secondary={true} style={styles.button} >
-	<ContentAdd style={styles.icon} />
  </RaisedButton>
  </div>
  </div>
