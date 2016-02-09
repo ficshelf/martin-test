@@ -20,10 +20,10 @@ export const MainCard = () => (
         <Board/>
     </CardMedia>
     <CardText>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+      Classic puzzle game also known as <b>Noughts and Crosses</b>,
+      <b>Tic Tac Toe</b> or sometimes <b>X</b> and <b>O</b>. 
+      This is a game for two players, called "X" and "O", 
+      who take turns marking the spaces in a 3x3 grid.
     </CardText>
     <CardActions>
       <FlatButton label="Play it Again, Martin" />
