@@ -23,7 +23,7 @@ class AppBarXO extends React.Component {
 	return this.setState({open: !this.state.open});
 	};
 
-    //iconClassNameRight="muidocs-icon-navigation-expand-more"
+    
   render() {
     return(
     <div> 
@@ -39,7 +39,6 @@ class AppBarXO extends React.Component {
 };
 
 
-//    <AppLeftNav open={this.state.open} />
 // define and export our Layout component
 export const Layout = ({content}) => (
     <div>

@@ -8,58 +8,63 @@ import O from 'material-ui/lib/svg-icons/image/panorama-fish-eye';
 import X from 'material-ui/lib/svg-icons/content/clear';
 
 const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
-  button: {
-	width: 80,
-	height: 80,
-	margin: 8,
-  },
-  icon: { 
-	width: 80,
-	height: 80,
-	}
+ root: {
+   display: 'flex',
+   flexWrap: 'wrap',
+   justifyContent: 'space-around',
+ },
+   button: {
+   width: 80,
+   height: 80,
+   margin: 8,
+ },
+ icon: { 
+   width: 80,
+   height: 80,
+ }
 };
 
 
 export const Board = () => (
-  <div style={styles.root}>
- <div className="board">
- <div className="row">
-  <RaisedButton label="Secondary" disabled={true} style={styles.button} >
-	<O style={styles.icon} />
- </RaisedButton>
- <RaisedButton label="Secondary" disabled={true} style={styles.button} >
-	<O style={styles.icon} />
- </RaisedButton>
- <RaisedButton label="Secondary" disabledBackgroundColor={Colors.pinkA200} disabled={true} style={styles.button} >
-	<X style={styles.icon} />
- </RaisedButton>
+ <div style={styles.root}>
+   <div className="board">
+     <div className="row">
+       <Cell value="X" />
+       <Cell value="O" />
+       <Cell value="empty" />
+     </div>
+     <div className="row">
+       <RaisedButton label="Secondary" disabled={true} style={styles.button} >
+       <O style={styles.icon} />
+       </RaisedButton>
+       <RaisedButton label="Secondary" disabled={true} style={styles.button} >
+       <O style={styles.icon} />
+       </RaisedButton>
+       <RaisedButton label="Secondary" disabledBackgroundColor={Colors.pinkA200} disabled={true} style={styles.button} >
+       <X style={styles.icon} />
+       </RaisedButton>
+     </div>
+     <div className="row">
+       <RaisedButton label="Secondary" secondary={true} style={styles.button} >
+       </RaisedButton>
+       <RaisedButton label="Secondary" secondary={true} style={styles.button} >
+       </RaisedButton>
+       <RaisedButton label="Secondary" disabledBackgroundColor={Colors.pinkA200} disabled={true} style={styles.button} >
+       <X style={styles.icon} />
+       </RaisedButton>
+     </div>
+     <div className="row">
+       <RaisedButton label="Secondary" disabled={true} style={styles.button} >
+       <O style={styles.icon} />
+       </RaisedButton>
+       <RaisedButton label="Secondary" disabled={true} style={styles.button} >
+       <X style={styles.icon} />
+       </RaisedButton>
+       <RaisedButton label="Secondary" disabledBackgroundColor={Colors.pinkA200} disabled={true} style={styles.button} >
+       <X style={styles.icon} />
+       </RaisedButton>
+     </div>
+   </div>
  </div>
- <div className="row">
-  <RaisedButton label="Secondary" secondary={true} style={styles.button} >
- </RaisedButton>
- <RaisedButton label="Secondary" secondary={true} style={styles.button} >
- </RaisedButton>
- <RaisedButton label="Secondary" disabledBackgroundColor={Colors.pinkA200} disabled={true} style={styles.button} >
-	<X style={styles.icon} />
- </RaisedButton>
- </div>
- <div className="row">
-  <RaisedButton label="Secondary" disabled={true} style={styles.button} >
-	<O style={styles.icon} />
- </RaisedButton>
- <RaisedButton label="Secondary" disabled={true} style={styles.button} >
-	<X style={styles.icon} />
- </RaisedButton>
- <RaisedButton label="Secondary" disabledBackgroundColor={Colors.pinkA200} disabled={true} style={styles.button} >
-	<X style={styles.icon} />
- </RaisedButton>
- </div>
- </div>
-  </div>
 );
 
