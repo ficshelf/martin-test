@@ -6,7 +6,7 @@ import Colors from 'material-ui/lib/styles/colors';
 import ColorManipulator from 'material-ui/lib/utils/color-manipulator';
 import O from 'material-ui/lib/svg-icons/image/panorama-fish-eye';
 import X from 'material-ui/lib/svg-icons/content/clear';
-import Cell from './cell.jsx';
+import Cell from './components/cell.jsx';
 
 const styles = {
  root: {
