@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import { Map, List, fromJS, is} from 'immutable';
 
 export const INITIAL_STATE = fromJS({
@@ -9,6 +9,7 @@ export const INITIAL_STATE = fromJS({
   ],
   turn: 'x',
   winner: null,
+  combo: null,
   draw: false
 });
 
@@ -27,9 +28,12 @@ export function move(state, position) {
 
     let win = checkWin(newBoard, turn);
     if(win){
+      // ADD CODE FOR WINNING COMBO HIGHLIGHTING newBoard = 
+  
       return state.merge({
         board: newBoard,
         turn: turn,
+        combo: win,
         winner: turn
       });
     }
@@ -74,7 +78,8 @@ function checkWin(board, turn) {
     });
   }).indexOf(true);
 
-  return winPost >= 0;
+
+  return ( (winPost >= 0) ? winningPoints[winPost] : false );//winPost >= 0;
 }
 
 function checkDraw(board) {

@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 
 // Action type
 export const MOVE = 'MOVE';

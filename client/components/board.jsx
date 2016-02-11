@@ -26,46 +26,26 @@ const styles = {
 };
 
 
-export const Board = () => (
- <div style={styles.root}>
-   <div className="board">
-     <div className="row">
-       <Cell value="X" />
-       <Cell value="O" />
-       <Cell value="empty" />
-     </div>
-     <div className="row">
-       <RaisedButton label="Secondary" disabled={true} style={styles.button} >
-       <O style={styles.icon} />
-       </RaisedButton>
-       <RaisedButton label="Secondary" disabled={true} style={styles.button} >
-       <O style={styles.icon} />
-       </RaisedButton>
-       <RaisedButton label="Secondary" disabledBackgroundColor={Colors.pinkA200} disabled={true} style={styles.button} >
-       <X style={styles.icon} />
-       </RaisedButton>
-     </div>
-     <div className="row">
-       <RaisedButton label="Secondary" secondary={true} style={styles.button} >
-       </RaisedButton>
-       <RaisedButton label="Secondary" secondary={true} style={styles.button} >
-       </RaisedButton>
-       <RaisedButton label="Secondary" disabledBackgroundColor={Colors.pinkA200} disabled={true} style={styles.button} >
-       <X style={styles.icon} />
-       </RaisedButton>
-     </div>
-     <div className="row">
-       <RaisedButton label="Secondary" disabled={true} style={styles.button} >
-       <O style={styles.icon} />
-       </RaisedButton>
-       <RaisedButton label="Secondary" disabled={true} style={styles.button} >
-       <X style={styles.icon} />
-       </RaisedButton>
-       <RaisedButton label="Secondary" disabledBackgroundColor={Colors.pinkA200} disabled={true} style={styles.button} >
-       <X style={styles.icon} />
-       </RaisedButton>
-     </div>
-   </div>
- </div>
-);
+//export const Board = () => (
+class Board extends React.Component {
+
+  constructor(props) {
+    super(props)
+  };
+
+  render() {
+    return (<div style={styles.root}>
+	     <div className="board">
+      		{this.props.board.map((row, x) => { 
+          	  return(
+		    <div className="row" key={x}>
+		    {row.map((col, y) => 
+                     <Cell value={String(col)}  key={y} position={{x,y}} onCellTap={this.props.onCellTap.bind(this)} />
+	            )}
+		  </div>)})}
+	    </div>
+	 </div>);}
+};
+
+export default Board;
 

@@ -9,13 +9,15 @@ import RemoveRedEye from 'material-ui/lib/svg-icons/image/remove-red-eye';
 import Delete from 'material-ui/lib/svg-icons/action/delete';
 import MenuIcon from 'material-ui/lib/svg-icons/navigation/menu';
 
+import { move, reset } from './../actions.jsx';
+
 class AppLeftNav extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {open: this.props.open};
-    console.log(this.state);
-    console.log(this.props.open);
+    //console.log(this.state);
+    //console.log(this.props.open);
   };
 
   handleToggle () {
@@ -25,6 +27,11 @@ class AppLeftNav extends React.Component {
 
   handleClose () { 
 	return this.setState({open: false});
+	};
+
+  handlePlay () {
+	this.handleClose();
+	FlowRouter.go('/');
 	};
   
   componentWillReceiveProps (nextProps) {
@@ -45,7 +52,7 @@ class AppLeftNav extends React.Component {
           open={this.state.open}
           onRequestChange={open => this.setState({open})}
         >
-          <MenuItem onTouchTap={this.handleClose.bind(this)} primaryText="Play!" leftIcon={<RemoveRedEye />}></MenuItem>
+          <MenuItem onTouchTap={this.handlePlay.bind(this)} primaryText="Play!" leftIcon={<RemoveRedEye />}></MenuItem>
           <MenuItem onTouchTap={this.handleClose.bind(this)} primaryText="Top Scores" leftIcon={<RemoveRedEye />}></MenuItem>
           <Divider />
           <MenuItem onTouchTap={this.handleClose.bind(this)} primaryText="About" leftIcon={<RemoveRedEye />}></MenuItem>

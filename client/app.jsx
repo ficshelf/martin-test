@@ -27,25 +27,28 @@ class AppBarXO extends React.Component {
   render() {
     return(
     <div> 
-    <AppBar
-    title="Noughts & Crosses"
-    iconElementLeft={<AppLeftNav open={this.state.open} />}
-    onLeftIconButtonTouchTap={this.handleToggle.bind(this)}
-    >
-    </AppBar>	
+        <AppBar
+        title="Noughts & Crosses"
+        iconElementLeft={<AppLeftNav open={this.state.open} />}
+        onLeftIconButtonTouchTap={this.handleToggle.bind(this)}
+        >
+        </AppBar>
     </div>
     );
   };
 };
 
+export default AppBarXO;
+
 
 // define and export our Layout component
 export const Layout = ({content}) => (
+    <Provider store={store}>
     <div>
     <AppBarXO/>
         <br />
         <div>{content}</div>
     </div>
+    </Provider>
 );
 
-export default AppBarXO;
