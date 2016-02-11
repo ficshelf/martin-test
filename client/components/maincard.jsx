@@ -9,8 +9,12 @@ import CardMedia from 'material-ui/lib/card/card-media';
 import CardTitle from 'material-ui/lib/card/card-title';
 import FlatButton from 'material-ui/lib/flat-button';
 import CardText from 'material-ui/lib/card/card-text';
+import O from 'material-ui/lib/svg-icons/image/panorama-fish-eye';
+import X from 'material-ui/lib/svg-icons/content/clear';
+import Avatar from 'material-ui/lib/avatar';
 
 import Board from './board.jsx';
+import Winner from './winner.jsx';
 import { move, reset } from './../actions.jsx';
 
 //export const MainCard = () => (
@@ -28,8 +32,8 @@ class MainCard extends React.Component {
 	  <Card>
 	    <CardHeader
 	      title={"Next move: " + turn} 
-	      subtitle="Playing Noughts & Crosses"
-	      avatar="http://lorempixel.com/100/100/nature/"
+	      subtitle={<Winner winner={this.props.winner} draw={this.props.draw} />}
+	      avatar={<Avatar className="avatar" icon={( turn == "x" ? <X/> : <O/>)}  />}
 	    />
 	    <CardMedia >
                <Board board={board}
@@ -37,8 +41,6 @@ class MainCard extends React.Component {
                 dispatch(move({x, y}))
                } />
 	    </CardMedia>
-             {this.props.winner ? <CardTitle title={"Player '"+this.props.winner + "' won"} /> : null} 
-             {this.props.draw ? <CardTitle title="It's a draw" /> : null} 
 	    <CardText>
 	      Classic puzzle game also known as <b>Noughts and Crosses</b>,
 	      <b>Tic Tac Toe</b> or sometimes <b>X</b> and <b>O</b>. 
