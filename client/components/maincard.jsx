@@ -26,7 +26,7 @@ class MainCard extends React.Component {
 
   render() { 
 	  const {dispatch, board, turn} = this.props;
-	  console.log(this.props);
+	  //console.log(this.props);
 
 	  return(
 	  <Card>

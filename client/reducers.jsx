@@ -15,7 +15,7 @@ export function reducer(state=INITIAL_STATE, action) {
 }
 
 
-xoxoxoApp = combineReducers({
+export default xoxoxoApp = combineReducers({
   reducer
 });
 
